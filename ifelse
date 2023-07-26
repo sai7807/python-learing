@@ -1,0 +1,125 @@
+#ifelse------
+n = 61
+if n%2 !=0 and n in range(6, 20):
+    print("weird")
+elif n in range(20, 60) or n in range(2, 5):
+    print("Not weird")
+else:
+    print("int not available")
+
+num = int(input("Enter a number: "))
+
+if num > 0:
+    print("The number is positive.")
+elif num < 0:
+    print("The number is negative.")
+else:
+    print("The number is zero.")
+
+year = int(input("Enter a year: "))
+
+if (year % 4 == 0 and year % 100 != 0) or (year % 400 == 0):
+    print("It's a leap year.")
+else:
+    print("It's not a leap year.")
+
+num1 = float(input("Enter the first number: "))
+num2 = float(input("Enter the second number: "))
+
+if num1 > num2:
+    print("The first number is greater.")
+elif num2 > num1:
+    print("The second number is greater.")
+else:
+    print("Both numbers are equal.")
+
+
+percentage = float(input("Enter the percentage: "))
+
+if percentage >= 90:
+    print("Grade: A")
+elif percentage >= 80:
+    print("Grade: B")
+elif percentage >= 70:
+    print("Grade: C")
+elif percentage >= 60:
+    print("Grade: D")
+else:
+    print("Grade: F")
+
+
+###tuples--------------------
+
+my_tuple = ("apple", "banana", "cherry")
+for i in range(len(my_tuple)):
+    print("Element at index", i, ":", my_tuple[i])
+
+tuple1 = (1, 2, 3)
+tuple2 = (4, 5, 6)
+concatenated_tuple = tuple1 + tuple2
+print("Concatenated tuple:", concatenated_tuple)
+
+def factorial(n):
+    if n == 0:
+        return 1
+    else:
+        return n * factorial(n - 1)
+
+num = int(input("Enter a number: "))
+result = factorial(num)
+print("Factorial of", num, "is", result)
+
+def is_palindrome(string):
+    reversed_string = string[::-1]
+    if string.lower() == reversed_string.lower():
+        return True
+    else:
+        return False
+
+word = input("Enter a word: ")
+if is_palindrome(word):
+    print("It is a palindrome.")
+else:
+    print("It is not a palindrome.")
+
+
+#string------
+
+my_string = input("Enter a string: ")
+
+reversed_string = my_string[::-1]
+
+if my_string == reversed_string:
+    print("The string is a palindrome.")
+else:
+    print("The string is not a palindrome.")
+
+my_string = input("Enter a string: ")
+character = input("Enter a character: ")
+
+count = my_string.count(character)
+print("Occurrence of", character, "in the string:", count)
+
+#dictionaries-------
+
+my_dict = {'a': 10, 'b': 5, 'c': 15, 'd': 20}
+key = input("Enter the key to check: ")
+if key in my_dict:
+    print("Key exists in the dictionary.")
+else:
+    print("Key does not exist in the dictionary.")
+
+
+my_dict = {'a': 10, 'b': 5, 'c': 15, 'd': 20}
+max_key = max(my_dict, key=my_dict.get)
+print("Key with maximum value:", max_key)
+
+dict1 = {'a': 1, 'b': 2}
+dict2 = {'c': 3, 'd': 4}
+merged_dict = dict1.copy()
+merged_dict.update(dict2)
+print("Merged dictionary:", merged_dict)
+
+numbers = [1, 2, 3, 2, 4, 1, 5, 4]
+unique_numbers = list(set(numbers))
+print("List with duplicates removed:", unique_numbers)
