@@ -1,0 +1,106 @@
+#Program to print numbers from 1 to 10 using a while loop:
+num = 1
+while num <= 10:
+    print(num)
+    num += 1
+
+
+#Program to find the factorial of a number using a for loop:
+def factorial(n):
+    result = 1
+    for i in range(1, n + 1):
+        result *= i
+    return result
+
+num = 5
+print("Factorial of", num, "is", factorial(num))
+
+
+# Fibonacci series using a while loop:
+def fibonacci(n):
+    a, b = 0, 1
+    while a < n:
+        print(a)
+        a, b = b, a + b
+
+fibonacci(20)
+
+# find the sum of all numbers in a list using a for loop:
+numbers = [1, 2, 3, 4, 5]
+sum = 0
+for num in numbers:
+    sum += num
+print("Sum:", sum)
+
+#check if a number is prime using a for loop
+def is_prime(num):
+    if num < 2:
+        return False
+    for i in range(2, int(num ** 0.5) + 1):
+        if num % i == 0:
+            return False
+    return True
+
+num = 17
+print(num, "is prime:", is_prime(num))
+
+# Program to print a pyramid of stars using nested loops:
+rows = 5
+for i in range(1, rows + 1):
+    for j in range(1, rows - i + 1):
+        print(" ", end="")
+    for k in range(1, i + 1):
+        print("* ", end="")
+    print()
+
+# greatest common divisor (GCD) using a while loop:
+def gcd(a, b):
+    while b:
+        a, b = b, a % b
+    return a
+
+num1, num2 = 24, 36
+print("GCD of", num1, "and", num2, "is", gcd(num1, num2))
+
+#    Program to find the second-largest number in a list using a for loop:
+numbers = [10, 5, 15, 20, 8]
+largest = second_largest = float("-inf")
+for num in numbers:
+    if num > largest:
+        second_largest = largest
+        largest = num
+    elif num > second_largest:
+        second_largest = num
+print("Second largest number:", second_largest)
+
+#    Program to find the factorial of numbers in a range and store them in a dictionary using a for loop:
+def factorial(n):
+    result = 1
+    for i in range(1, n + 1):
+        result *= i
+    return result
+
+factorials_dict = {}
+for num in range(1, 6):
+    factorials_dict[num] = factorial(num)
+
+print("Factorials:", factorials_dict)
+
+#    Program to check if a number is a perfect square using a while loop:
+def is_perfect_square(num):
+    root = 0
+    while root * root <= num:
+        if root * root == num:
+            return True
+        root += 1
+    return False
+
+number = 25
+print(number, "is a perfect square:", is_perfect_square(number))
+
+#    Program to print the elements of a 2D list using nested loops:
+matrix = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+for row in matrix:
+    for element in row:
+        print(element, end=" ")
+    print()
