@@ -1,0 +1,180 @@
+# length of the string
+
+def calculate_length(string):
+    return len(string)
+
+input_string = input("Enter a string: ")
+length = calculate_length(input_string)
+print("Length of the string:", length)
+
+# occurance of char in string
+
+def count_occurrences(string, char):
+    count = 0
+    for c in string:
+        if c == char:
+            count += 1
+    return count
+
+input_string = input("Enter a string: ")
+input_char = input("Enter a character: ")
+occurrences = count_occurrences(input_string, input_char)
+print("Occurrences of", input_char, "in the string:", occurrences)
+
+#palindrome
+
+def is_palindrome(string):
+    return string == string[::-1]
+
+input_string = input("Enter a string: ")
+if is_palindrome(input_string):
+    print("The string is a palindrome.")
+else:
+    print("The string is not a palindrome.")
+
+# to remove duplicate char from string
+
+def remove_duplicates(string):
+    return ''.join(set(string))
+
+input_string = input("Enter a string: ")
+result = remove_duplicates(input_string)
+print("String with duplicates removed:", result)
+
+#captalize first letter of each word
+
+def capitalize_words(string):
+    words = string.split()
+    capitalized_words = [word.capitalize() for word in words]
+    return ' '.join(capitalized_words)
+
+input_string = input("Enter a string: ")
+result = capitalize_words(input_string)
+print("String with capitalized words:", result)
+
+#to find longest word in string
+
+def find_longest_word(string):
+    words = string.split()
+    longest_word = max(words, key=len)
+    return longest_word
+
+input_string = input("Enter a string: ")
+longest_word = find_longest_word(input_string)
+print("Longest word in the string:", longest_word)
+
+
+#to count noof wods in string
+
+def count_words(string):
+    words = string.split()
+    return len(words)
+
+input_string = input("Enter a string: ")
+word_count = count_words(input_string)
+print("Number of words in the string:", word_count)
+
+#reverse the order of words in a string
+
+def reverse_words(string):
+    words = string.split()
+    reversed_words = words[::-1]
+    return ' '.join(reversed_words)
+
+input_string = input("Enter a string: ")
+result = reverse_words(input_string)
+print("String with reversed word order:", result)
+
+#chck string is anagram or not
+
+def is_anagram(string1, string2):
+    return sorted(string1) == sorted(string2)
+
+input_string1 = input("Enter the first string: ")
+input_string2 = input("Enter the second string: ")
+if is_anagram(input_string1, input_string2):
+    print("The strings are anagrams.")
+else:
+    print("The strings are not anagrams.")
+
+#most frequent char of sting
+
+def most_frequent_character(string):
+    char_count = {}
+    for char in string:
+        char_count[char] = char_count.get(char, 0) + 1
+    most_frequent = max(char_count, key=char_count.get)
+    return most_frequent
+
+input_string = input("Enter a string: ")
+most_frequent_char = most_frequent_character(input_string)
+print("Most frequent character:", most_frequent_char)
+
+#to replace a substring in string
+
+def replace_substring(string, old_substring, new_substring):
+    return string.replace(old_substring, new_substring)
+
+input_string = input("Enter a string: ")
+old_sub = input("Enter the substring to replace: ")
+new_sub = input("Enter the new substring: ")
+result = replace_substring(input_string, old_sub, new_sub)
+print("Modified string:", result)
+
+#check string is pangram
+
+
+import string
+
+def is_pangram(string):
+    alphabet = set(string.ascii_lowercase)
+    string_chars = set(string.lower())
+    return alphabet.issubset(string_chars)
+
+input_string = input("Enter a string: ")
+if is_pangram(input_string):
+    print("The string is a pangram.")
+else:
+    print("The string is not a pangram.")
+
+
+#split string into list of words
+
+def split_string(string, delimiter=' '):
+    return string.split(delimiter)
+
+input_string = input("Enter a string: ")
+result = split_string(input_string)
+print("List of words:", result)
+
+# convert string to title case
+
+def to_title_case(string):
+    return string.title()
+
+input_string = input("Enter a string: ")
+result = to_title_case(input_string)
+print("Title-cased string:", result)
+
+
+# to remove whitespace
+
+def remove_whitespace(string):
+    return string.replace(" ", "")
+
+input_string = input("Enter a string: ")
+result = remove_whitespace(input_string)
+print("String with whitespace removed:", result)
+
+# index of substring in a string
+
+def find_substring(string, substring):
+    return string.find(substring)
+
+input_string = input("Enter a string: ")
+sub = input("Enter the substring to find: ")
+index = find_substring(input_string, sub)
+if index != -1:
+    print("Substring found at index:", index)
+else:
+    print("Substring not found.")
