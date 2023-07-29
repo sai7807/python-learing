@@ -100,26 +100,3 @@ character = input("Enter a character: ")
 count = my_string.count(character)
 print("Occurrence of", character, "in the string:", count)
 
-#dictionaries-------
-
-my_dict = {'a': 10, 'b': 5, 'c': 15, 'd': 20}
-key = input("Enter the key to check: ")
-if key in my_dict:
-    print("Key exists in the dictionary.")
-else:
-    print("Key does not exist in the dictionary.")
-
-
-my_dict = {'a': 10, 'b': 5, 'c': 15, 'd': 20}
-max_key = max(my_dict, key=my_dict.get)
-print("Key with maximum value:", max_key)
-
-dict1 = {'a': 1, 'b': 2}
-dict2 = {'c': 3, 'd': 4}
-merged_dict = dict1.copy()
-merged_dict.update(dict2)
-print("Merged dictionary:", merged_dict)
-
-numbers = [1, 2, 3, 2, 4, 1, 5, 4]
-unique_numbers = list(set(numbers))
-print("List with duplicates removed:", unique_numbers)
